@@ -1,7 +1,7 @@
-let button = document.getElementById("enviar")
+let button = document.getElementById("enviar");
 
 button.onclick = async function() {
-   let form = document.getElementById("formulario")
+   let form = document.getElementById("formulario");
    let dadosForm = new FormData(form);
 
     const response = await fetch('http://localhost:3000/api/store/empresas', {

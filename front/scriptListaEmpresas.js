@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async ()  => {
 			card.className = 'empresa-card';
  
 			const img = document.createElement('img');
-			img.src = empresa.imagem;
+			img.src = `http://localhost:3000/uploads/${empresa.imagem}`;
  
 			const infoDiv = document.createElement('div');
 			infoDiv.className = 'info';

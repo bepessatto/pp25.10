@@ -8,7 +8,6 @@ const path = require('path');
 const fs = require('fs');
 const fileUpload = require('express-fileupload');
 
-const taskRouter = require('./routes/taskRouter');
 const empresasRouter = require('./routes/empresasRouter')
 const cors = require('cors');
 
@@ -22,7 +21,8 @@ app.use(express.json());
 app.use(cors());
 app.use(fileUpload());
 
-app.use('/api', taskRouter);
+app.use('/uploads', express.static(path.join(__dirname, "uploads")))
+
 app.use('/api', empresasRouter);
 
 module.exports = app;
