@@ -19,3 +19,17 @@ button.onclick = async function() {
         alert("Não")
     }
 }
+
+deleteBtn.addEventListener('click', async () => {
+    console.log(`Tentando deletar empresa com ID: ${empresa.id}`);
+    const deleteResponse = await fetch(`http://localhost:3000/api/delete/empresa/${empresa.id}`, {
+        method: 'DELETE'
+    });
+    const deleteResult = await deleteResponse.json();
+    if (deleteResult.success) {
+        card.remove();
+        console.log('Empresa deletada com sucesso');
+    } else {
+        console.error('Erro ao deletar:', deleteResult.message);
+    }
+});
