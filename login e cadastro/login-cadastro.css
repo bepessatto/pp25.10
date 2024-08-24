@@ -1,0 +1,322 @@
+/* Define que todos os elementos terão zero de margem e padding, e aplicam o box-sizing: border-box para incluir padding e bordas no tamanho total dos elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Define a fonte global */
+}
+
+/* Define que o corpo da página usa flexbox para centralizar o conteúdo na tela, com uma altura mínima de 100vh (100% da altura da viewport) e um fundo verde escuro */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #284930;
+}
+
+/* Define o estilo do container principal que envolve o conteúdo */
+.container {
+    position: relative; /* Permite o uso de posicionamento absoluto para elementos filhos */
+    width: 70vw; /* Define a largura como 70% da viewport */
+    height: 80vh; /* Define a altura como 80% da viewport */
+    background: #fff; /* Define o fundo branco */
+    border-radius: 15px; /* Aplica bordas arredondadas */
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3); /* Aplica sombras ao redor do container */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites do container */
+}
+
+/* Adiciona uma camada de gradiente animada no fundo do container que aparece durante as transições */
+.container::before {
+    content: ""; /* Cria um elemento vazio */
+    position: absolute;
+    top: 0;
+    left: -50%; /* Inicia fora da tela, à esquerda */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #c0f396, #59803a); /* Aplica o gradiente */
+    z-index: 6; /* Coloca a camada acima de outros elementos */
+    transform: translateX(100%); /* Move a camada para a direita, fora da tela */
+    transition: 1s ease-in-out; /* Transição suave de 1 segundo */
+}
+
+/* Define a área que contém os formulários de login e cadastro */
+.signin-signup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5; /* Coloca essa área abaixo da camada animada */
+}
+
+/* Estiliza os formulários dentro do container */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%; /* Largura do formulário como 40% do container */
+    min-width: 238px; /* Define a largura mínima para manter a legibilidade */
+    padding: 0 10px; /* Define um pequeno espaçamento lateral */
+}
+
+/* Inicialmente, o formulário de login é visível */
+form.sign-in-form {
+    opacity: 1; /* Totalmente visível */
+    transition: 0.5s ease-in-out; /* Transição suave de 0.5 segundos */
+    transition-delay: 1s; /* Espera 1 segundo antes de aplicar a transição */
+}
+
+/* Inicialmente, o formulário de cadastro é invisível */
+form.sign-up-form {
+    opacity: 0; /* Totalmente invisível */
+    transition: 0.5s ease-in-out; /* Transição suave de 0.5 segundos */
+    transition-delay: 1s; /* Espera 1 segundo antes de aplicar a transição */
+}
+
+/* Estiliza os títulos dos formulários */
+.title {
+    font-size: 35px;
+    color: #284930; /* Cor verde escuro */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estiliza os campos de input dentro dos formulários */
+.input-field {
+    width: 100%; /* Largura total do campo */
+    height: 50px;
+    background: #f0f0f0; /* Fundo cinza claro */
+    margin: 10px 0; /* Espaçamento vertical */
+    border: 2px solid #284930; /* Borda verde escuro */
+    border-radius: 50px; /* Bordas arredondadas */
+    display: flex;
+    align-items: center;
+}
+
+/* Estiliza os ícones dentro dos campos de input */
+.input-field i {
+    flex: 1; /* Ocupa 1 parte proporcional do espaço */
+    text-align: center; /* Centraliza o ícone */
+    color: #666; /* Cor cinza */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+/* Estiliza os campos de texto (input) */
+.input-field input {
+    flex: 5; /* Ocupa 5 partes proporcionais do espaço */
+    background: none; /* Remove o fundo padrão */
+    border: none; /* Remove as bordas padrão */
+    outline: none; /* Remove o contorno padrão */
+    width: 100%; /* Ocupa toda a largura disponível */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: 600; /* Fonte mais grossa */
+    color: #444; /* Cor cinza escuro */
+}
+
+/* Estiliza os botões dos formulários */
+.btn {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 50px; /* Bordas arredondadas */
+    background: linear-gradient(-45deg, #23704a, #35571a); /* Gradiente de verde */
+    color: #fff; /* Texto branco */
+    font-weight: 600; /* Texto em negrito */
+    margin: 10px 0; /* Espaçamento vertical */
+    text-transform: uppercase; /* Letras maiúsculas */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+}
+
+/* Efeito hover nos botões */
+.btn:hover {
+    background: linear-gradient(-45deg, #23704a, #35571a); /* Mantém o gradiente ao passar o mouse */
+}
+
+/* Texto descritivo das opções sociais */
+.social-text {
+    margin: 10px 0; /* Espaçamento vertical */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Container dos ícones sociais */
+.social-media {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones */
+}
+
+/* Estiliza os ícones sociais */
+.social-icon {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444; /* Cor cinza */
+    border: 1px solid #444; /* Borda cinza */
+    border-radius: 50px; /* Ícones arredondados */
+    margin: 0 5px; /* Espaçamento lateral */
+}
+
+/* Remove a sublinhado dos links */
+a {
+    text-decoration: none;
+}
+
+/* Efeito hover nos ícones sociais */
+.social-icon:hover {
+    color: #bef790; /* Muda a cor do ícone */
+    border-color: #bef790; /* Muda a cor da borda */
+}
+
+/* Container dos painéis de conteúdo */
+.panels-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Estiliza os painéis laterais */
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 35%;
+    min-width: 238px;
+    padding: 0 10px;
+    text-align: center;
+    z-index: 6; /* Coloca os painéis acima de outros elementos */
+}
+
+/* Impede interação com o painel esquerdo inicialmente */
+.left-panel {
+    pointer-events: none;
+}
+
+/* Estiliza o conteúdo dos painéis */
+.content {
+    color: #fff; /* Texto branco */
+    transition: 1.1s ease-in-out; /* Transição suave */
+    transition-delay: 0.5s; /* Atraso na transição */
+}
+
+/* Estiliza o título dos painéis */
+.panel h3 {
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 600; /* Negrito */
+}
+
+/* Estiliza o parágrafo dos painéis */
+.panel p {
+    font-size: 15px; /* Tamanho da fonte */
+    padding: 10px 0; /* Espaçamento vertical */
+}
+
+/* Estiliza as imagens dentro dos painéis */
+.image {
+    width: 100%; /* Ocupa toda a largura */
+    transition: 1.1s ease-in-out; /* Transição suave */
+    transition-delay: 0.4s; /* Atraso na transição */
+}
+
+/* Animações iniciais para os painéis */
+.left-panel .image,
+.left-panel .content {
+    transform: translateX(-200%); /* Move o conteúdo para fora da tela à esquerda */
+}
+
+.right-panel .image,
+.right-panel .content {
+    transform: translateX(0); /* Mantém o conteúdo no lugar */
+}
+
+/* Texto adicional mostrado no modo responsivo */
+.account-text {
+    display: none;
+}
+
+/* Animações e transições ao alternar para o modo de cadastro */
+.container.sign-up-mode::before {
+    transform: translateX(0); /* Move o gradiente animado para o centro */
+}
+
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
+    transform: translateX(200%); /* Move o conteúdo para fora da tela à direita */
+}
+
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
+    transform: translateX(0); /* Traz o conteúdo de volta à tela */
+}
+
+.container.sign-up-mode form.sign-in-form {
+    opacity: 0; /* Esconde o formulário de login */
+}
+
+.container.sign-up-mode form.sign-up-form {
+    opacity: 1; /* Mostra o formulário de cadastro */
+}
+
+.container.sign-up-mode .right-panel {
+    pointer-events: none; /* Impede interação com o painel direito */
+}
+
+.container.sign-up-mode .left-panel {
+    pointer-events: all; /* Permite interação com o painel esquerdo */
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 779px) {
+    .container {
+        width: 100vw; /* Usa 100% da largura da tela */
+        height: 100vh; /* Usa 100% da altura da tela */
+    }
+}
+
+@media (max-width: 635px) {
+    .container::before {
+        display: none; /* Remove o gradiente animado */
+    }
+
+    form {
+        width: 80%; /* Largura dos formulários aumenta para 80% */
+    }
+
+    form.sign-up-form {
+        display: none; /* Esconde o formulário de cadastro inicialmente */
+    }
+
+    .container.sign-up-mode2 form.sign-up-form {
+        display: flex; /* Mostra o formulário de cadastro no modo sign-up-mode2 */
+        opacity: 1;
+    }
+
+    .container.sign-up-mode2 form.sign-in-form {
+        display: none; /* Esconde o formulário de login no modo sign-up-mode2 */
+    }
+
+    .panels-container {
+        display: none; /* Esconde os painéis laterais em telas pequenas */
+    }
+
+    .account-text {
+        display: initial; /* Mostra o texto adicional */
+        margin-top: 30px; /* Adiciona espaço acima do texto */
+    }
+}
+
+@media (max-width: 320px) {
+    form {
+        width: 90%; /* Aumenta ainda mais a largura dos formulários */
+    }
+}

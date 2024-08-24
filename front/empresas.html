@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" href="empresas.css">
     <title>HomePage</title>
+
 </head>
 
 <header>
+    
     <a href="#"><img src="images/LOGO.png" class="logo" alt=""></a>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="../Página Apoie a causa/apoie-causa.html">Apoie a causa</a></li>
-                <li><a href="../página SOBRE NÓS/sobre-nós.html">Sobre nós</a></li>
-                <li><a href="../login e cadastro teste 2/login-cadastro.html">Login</a></li>
-                <li><a href="../login e cadastro teste 2/login-cadastro.html">Cadastro</a></li>
-            </ul>
+    
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="../Página Apoie a causa/apoie-causa.html">Apoie a causa</a></li>
+        <li><a href="../página SOBRE NÓS/sobre-nós.html">Sobre nós</a></li>
+        <li><a href="../login e cadastro/login-cadastro.html">Login</a></li>
+        <li><a href="../login e cadastro/login-cadastro.html">Cadastro</a></li>
+    </ul>
 </header>
 
 <div class="contentproje">
+    <!-- Seção de conteúdo principal com uma mensagem de boas-vindas -->
+
     <h3>Seja Bem Vindo</h3>
-    <p>O projeto RTT ( Refugiado Também Trabalha ) foi criado e pensado com o intuito de poder ajudar
-     pessoas refugiadas que chegam de fora do país aa encontrar um emprego.
-     Tendo a ciência da dificuldade e demora  pela busca, foi desenvolvido este projeto, pois através de pesquisas 
-     cerca de mais de 60% dos refugiados acabam desempregados e param na rua, pois se no curto prazo
-     de chegada ao Brasil não arrumarem emprego, o grande risco de ficar sem moradia é grande.
-     
-     Por isso o projeto também aceita ajudas de apoiadores, pois precisamos de empresas que apoiem a causa
-     e estejam dispostos a receberem refugiados em seus locais de trabalho que só tem benefícios, através
-     de pesquisas uma empresa que contém um refugiado ao menos dentro de sua equipe gera mais resultados, mais foco
-     e principalmente mais união e trabalho em equipe dentro da empresa e por conta de preconceitos pessoas acabam
-     nem se interessando para saber mais sobre o assunto e dar mais atenção e esse é o nosso intuito, quebrar essas barreiras
-     de preconceito e gerar mais espaços para todos refugiados e assim gerando mais resultados para qualquer empresa, sendo
-     assim é um benefício para todos!</p>
-     <!-- a href é para colocar o link da pagina, que aí sera direcionado pra ela -->
+
+    <p>
+        O projeto RTT (Refugiado Também Trabalha) foi criado e pensado com o intuito de poder ajudar
+        pessoas refugiadas que chegam de fora do país a encontrar um emprego.
+        Tendo a ciência da dificuldade e demora pela busca, foi desenvolvido este projeto, pois através de pesquisas 
+        cerca de mais de 60% dos refugiados acabam desempregados e param na rua, pois se no curto prazo
+        de chegada ao Brasil não arrumarem emprego, o grande risco de ficar sem moradia é grande.
+
+        Por isso o projeto também aceita ajudas de apoiadores, pois precisamos de empresas que apoiem a causa
+        e estejam dispostas a receberem refugiados em seus locais de trabalho, que só traz benefícios. 
+        Pesquisas indicam que uma empresa que contém ao menos um refugiado dentro de sua equipe gera mais resultados, 
+        mais foco e principalmente mais união e trabalho em equipe. Muitas vezes, por preconceitos, as pessoas acabam 
+        nem se interessando pelo assunto. Nosso intuito é quebrar essas barreiras, gerar mais espaços para refugiados e, 
+        assim, gerar mais resultados para qualquer empresa. É um benefício para todos!
+    </p>
+
     <a href="./listaEmpresas.html" class="bntproj">Acesse agora as empresas disponíveis</a>
 </div>
 
@@ -44,23 +52,39 @@
 </div>
 
 <body>
+    <!-- Início do corpo principal da página -->
+
     <h2>Cadastrar sua empresa</h2>
+    <!-- Título para o formulário de cadastro de empresas -->
+
     <form action="#" enctype="multipart/form-data" id="formulario">
-        <label for="">Nome</label>
+        <!-- Formulário para cadastro de empresas, com suporte para envio de arquivos (multipart/form-data) -->
+        
+        <label for="nome">Nome</label>
+        <!-- Label para o campo de nome -->
         <input type="text" id="nome" name="nome">
+        <!-- Campo de texto para inserir o nome da empresa -->
 
-        <label for="">Endereço</label>
+        <label for="endereco">Endereço</label>
+        <!-- Label para o campo de endereço -->
         <input type="text" id="endereco" name="endereco">
+        <!-- Campo de texto para inserir o endereço da empresa -->
 
-        <label for="">Imagem</label>
+        <label for="imagem">Imagem</label>
+        <!-- Label para o campo de upload de imagem -->
         <input type="file" id="imagem" name="imagem">
+        <!-- Campo de upload de arquivo para enviar uma imagem -->
 
-        <label for="">Telefone</label>
+        <label for="telefone">Telefone</label>
+        <!-- Label para o campo de telefone -->
         <input type="text" id="telefone" name="telefone">
+        <!-- Campo de texto para inserir o telefone da empresa -->
 
         <button id="enviar">Cadastrar Empresa</button>
+        <!-- Botão para enviar o formulário e cadastrar a empresa -->
     </form>
 </body>
 
 <script src="scriptEmpresas.js"></script>
+<!-- Linka o arquivo JavaScript externo para funcionalidades adicionais da página -->
 </html>

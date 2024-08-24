@@ -1,165 +1,159 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+/* Importa a fonte 'Noto Sans' do Google Fonts com diferentes variações de peso e estilo */
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-
 }
+/* Reseta a margem e o padding para todos os elementos e define a fonte padrão como 'Poppins' */
 
-/* Geral */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans', sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    font-family: 'Noto Sans', sans-serif; /* Define a fonte 'Noto Sans' como padrão para o corpo */
+    background-color: #f4f4f4; /* Define a cor de fundo do corpo */
+    display: flex; /* Aplica display flex para o layout */
+    flex-direction: column; /* Coloca os itens em uma coluna */
+    align-items: flex-start; /* Alinha os itens ao canto esquerdo */
+    justify-content: flex-start; /* Garante que os itens estejam no topo */
+    min-height: 100vh; /* Garante que o corpo ocupe no mínimo 100% da altura da tela */
 }
 
-/* Header */
 header {
-    border-radius: 0 0 20px 20px;
-    width: 100%;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #bef790;
-    z-index: 10;
+    border-radius: 0 0 20px 20px; /* Define bordas arredondadas no rodapé do cabeçalho */
+    width: 100%; /* Ocupa 100% da largura da tela */
+    padding: 20px 0; /* Adiciona espaçamento no topo e embaixo */
+    display: flex; /* Aplica display flex para o layout do cabeçalho */
+    justify-content: space-between; /* Distribui os itens ao longo do cabeçalho com espaço entre eles */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    background-color: #bef790; /* Define a cor de fundo do cabeçalho */
+    z-index: 10; /* Define a posição no empilhamento de elementos */
 }
 
 header .logo {
-    max-width: 80px;
+    max-width: 80px; /* Define a largura máxima da logo */
 }
 
 header ul {
-    display: flex;
-    padding: 0;
-    margin: 0;
+    display: flex; /* Coloca os itens do menu em linha */
+    padding: 0; /* Remove o padding do <ul> */
+    margin: 0; /* Remove a margem do <ul> */
 }
 
 header ul li {
-    list-style: none;
+    list-style: none; /* Remove o estilo padrão de lista */
 }
 
 header ul li a {
-    color: #333;
-    font-weight: 400;
-    padding: 0 30px;
-    text-decoration: none;
-    font-size: 16px;
+    color: #333; /* Define a cor do texto dos links */
+    font-weight: 400; /* Define o peso da fonte como normal */
+    padding: 0 30px; /* Adiciona espaçamento lateral aos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Define o tamanho da fonte */
 }
 
-/* Card do formulário */
 form {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-    max-width: 500px;
-    box-sizing: border-box;
-    margin: 20px;
+    background: white; /* Define o fundo branco para o formulário */
+    border-radius: 12px; /* Define bordas arredondadas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao redor do formulário */
+    padding: 20px; /* Adiciona espaçamento interno */
+    width: 100%; /* Define largura total */
+    max-width: 500px; /* Define a largura máxima */
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+    margin: 20px 0; /* Adiciona espaçamento superior e inferior ao formulário */
 }
 
-/* Título do formulário */
 h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    text-align: left; /* Alinha o título à esquerda */
+    margin-bottom: 20px; /* Adiciona espaçamento inferior */
+    color: #333; /* Define a cor do texto */
 }
 
-/* Estilo dos labels */
 label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
+    display: block; /* Garante que os labels ocupem toda a largura */
+    margin-bottom: 8px; /* Adiciona espaçamento inferior aos labels */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    color: #333; /* Define a cor do texto */
 }
 
-/* Estilo dos inputs e botão */
 input[type="text"],
 input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
+    width: 100%; /* Ocupa 100% da largura disponível */
+    padding: 10px; /* Adiciona espaçamento interno */
+    margin-bottom: 15px; /* Adiciona espaçamento inferior */
+    border: 1px solid #ddd; /* Define uma borda cinza clara */
+    border-radius: 8px; /* Define bordas arredondadas */
+    box-sizing: border-box; /* Inclui o padding na largura total */
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #bef790;
-    color: #20582e;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
+    width: 100%; /* O botão ocupa toda a largura disponível */
+    padding: 10px; /* Adiciona espaçamento interno */
+    background-color: #bef790; /* Define a cor de fundo do botão */
+    color: #20582e; /* Define a cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 8px; /* Define bordas arredondadas */
+    font-size: 16px; /* Define o tamanho da fonte */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    font-weight: bold; /* Deixa o texto em negrito */
 }
 
 button:hover {
-    background-color: #a2d54b;
+    background-color: #a2d54b; /* Altera a cor de fundo ao passar o mouse */
 }
 
-/* Estilização da seção de boas-vindas */
 .contentproje {
-    text-align: center;
-    margin: 20px;
+    text-align: left; /* Alinha o conteúdo à esquerda */
+    margin: 20px 0; /* Adiciona espaçamento superior e inferior */
 }
 
 .contentproje h3 {
-    font-size: 35px;
-    color: #000;
-    margin-bottom: 10px;
+    font-size: 35px; /* Define o tamanho da fonte do título */
+    color: #000; /* Define a cor do título */
+    margin-bottom: 10px; /* Adiciona espaçamento inferior */
 }
 
 .contentproje p {
-    font-size: 16px;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 16px; /* Define o tamanho da fonte do parágrafo */
+    color: #333; /* Define a cor do texto */
+    max-width: 800px; /* Define a largura máxima do parágrafo */
+    margin: 0; /* Remove a margem padrão */
 }
 
 .contentproje .bntproj {
-    display: inline-block;
-    background: #bef790;
-    color: #20582e;
-    font-size: 17px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 20px;
+    display: inline-block; /* Exibe como bloco inline */
+    background: #bef790; /* Define a cor de fundo */
+    color: #20582e; /* Define a cor do texto */
+    font-size: 17px; /* Define o tamanho da fonte */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    border-radius: 8px; /* Define bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    margin-top: 20px; /* Adiciona espaçamento superior */
 }
 
 .circulo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #bef790;
-    clip-path: circle(600px at right 800px);
+    position: fixed; /* Mantém a posição fixa na tela */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    width: 100%; /* Ocupa 100% da largura */
+    height: 100%; /* Ocupa 100% da altura */
+    background: #bef790; /* Define a cor de fundo */
+    clip-path: circle(500px at right 800px); /* Cria um recorte circular com posição específica */
 }
 
 .imgbox {
-    position: absolute;
-    top: 60%;
-    right: 30px;
-    transform: translateY(-50%);
-    width: 600px;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 100px;
-    margin-top: 50px;
+    position: fixed; /* Mantém a posição fixa */
+    top: 70%; /* Alinha a 70% do topo */
+    right: 30px; /* Define a posição à direita */
+    transform: translateY(-50%); /* Centraliza a imagem verticalmente */
+    width: 600px; /* Define a largura da caixa da imagem */
+    display: flex; /* Aplica flexbox */
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    padding-right: 100px; /* Adiciona padding à direita */
+    margin-top: 50px; /* Adiciona margem superior */
 }
 
 .imgbox img {
-    max-width: 500px;
+    max-width: 400px; /* Define a largura máxima da imagem */
 }
