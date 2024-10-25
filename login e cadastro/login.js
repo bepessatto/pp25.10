@@ -62,37 +62,33 @@ async function getUser() {
 
 // Função assíncrona para lidar com o envio de cadastro
 async function handleSubmit(event) {
-    event.preventDefault(); // Evita o comportamento padrão do formulário (recarregar a página)
+    event.preventDefault();
 
-    // Obtém os valores inseridos pelo usuário nos campos de cadastro
     let usuario = document.getElementById("usuario").value;
     let email = document.getElementById("emailCadastro").value;
     let senha = document.getElementById("senhaCadastro").value;
+    let tipoUsuario = document.getElementById("tipoUsuario").value;  // Captura o tipo de usuário
 
-    // Cria um objeto com os dados de cadastro
-    let data = { usuario, email, senha };
+    let data = { usuario, email, senha, tipoUsuario };  // Inclui o tipo de usuário nos dados
 
-    // Faz uma requisição POST para criar o usuário na API
     const response = await fetch('http://localhost:3000/api/user/create', {
         method: "POST",
         headers: {
-            "Content-Type": "application/json", // Define o tipo de conteúdo como JSON
+            "Content-Type": "application/json",
         },
-        body: JSON.stringify(data) // Envia os dados no corpo da requisição
+        body: JSON.stringify(data)
     });
 
-    // Converte a resposta em formato JSON
     const results = await response.json();
 
-    // Verifica se o cadastro foi bem-sucedido
     if (results.success) {
-        // Redireciona o usuário para a página de login
+        alert(results.message);
         window.location.href = './login-cadastro.html';
-        alert(results.message); // Exibe uma mensagem de sucesso
     } else {
-        alert(results.message); // Exibe uma mensagem de erro
+        alert(results.message);
     }
 }
+ 
 
 // Função assíncrona para lidar com o login
 async function handleLogin(event) {

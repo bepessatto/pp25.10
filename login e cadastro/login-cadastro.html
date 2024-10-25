@@ -41,28 +41,34 @@
 
             <!-- Formulário de cadastro -->
             <form action="" class="sign-up-form">
-                <!-- Título do formulário de cadastro -->
                 <h2 class="title">Cadastro</h2>
-                <!-- Campo de input para o nome de usuário -->
                 <div class="input-field">
-                    <i class="fas fa-user"></i> <!-- Ícone de usuário -->
-                    <input type="text" placeholder="Nome de usuário" id="usuario"> <!-- Campo para o nome de usuário -->
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Nome de usuário" id="usuario">
                 </div>
-                <!-- Campo de input para o email -->
                 <div class="input-field">
-                    <i class="fas fa-envelope"></i> <!-- Ícone de envelope (email) -->
-                    <input type="text" placeholder="Email" id="emailCadastro"> <!-- Campo para o email de cadastro -->
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="Email" id="emailCadastro">
                 </div>
-                <!-- Campo de input para a senha -->
                 <div class="input-field">
-                    <i class="fas fa-lock"></i> <!-- Ícone de cadeado (senha) -->
-                    <input type="password" placeholder="Senha" id="senhaCadastro"> <!-- Campo para a senha de cadastro -->
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Senha" id="senhaCadastro">
                 </div>
-                <!-- Botão de cadastro com função associada ao clique -->
-                <button type="button" onclick="handleSubmit(event)" value="Cadastre" class="btn">Cadastre</button>
-                <!-- Texto com link para a página de login caso o usuário já tenha uma conta -->
+            
+                <!-- Adicionando o campo dropdown para selecionar o tipo de usuário -->
+                <div class="input-field">
+                    <i class="fas fa-user-tag"></i>
+                    <select id="tipoUsuario">
+                        <option value="" disabled selected>Selecione o tipo de usuário</option>
+                        <option value="refugiado">Refugiado</option>
+                        <option value="apoiador">Apoiador</option>
+                    </select>
+                </div>
+            
+                <button type="button" onclick="handleSubmit(event)" class="btn">Cadastre</button>
                 <p class="account-text">Já possui uma conta? <a href="#" id="sign-in-btn2">Sign in</a></p>
             </form>
+            
         </div>
 
         <!-- Container dos painéis laterais (esquerdo e direito) -->
