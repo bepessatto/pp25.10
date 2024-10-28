@@ -8,7 +8,7 @@ async function login(request, response) {
 
     // Define o comando SQL para buscar o email e a senha na tabela 'users'
     // '?' é um placeholder para o valor do email
-    const query = "SELECT email, password FROM users WHERE email = ?";
+    const query = "SELECT id, email, password, tipo FROM users WHERE email = ?";
 
     // Executa a consulta SQL no banco de dados
     connection.query(query, email, (err, results) => {

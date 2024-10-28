@@ -18,6 +18,7 @@ if (!fs.existsSync(uploadPath)) {
 
 // Função assíncrona para armazenar novas empresas
 async function storeEmpresas(request, response) {
+
     // Verifica se um arquivo foi enviado
     if (!request.files) {
         return response.status(400).json({
@@ -44,11 +45,14 @@ async function storeEmpresas(request, response) {
             request.body.nome,
             request.body.endereco,
             imagemNome,
-            request.body.telefone
+            request.body.telefone,
+            request.body.userId
         ];
 
+        console.log(params)
+
         // Define o comando SQL para inserir uma nova empresa
-        const query = "INSERT INTO empresas(nome, endereco, imagem, telefone) VALUES(?, ?, ?, ?)";
+        const query = "INSERT INTO empresas(nome, endereco, imagem, telefone, user_id) VALUES(?, ?, ?, ?, ?)";
 
         // Executa a consulta SQL no banco de dados
         connection.query(query, params, (err, results) => {

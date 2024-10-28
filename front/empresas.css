@@ -11,14 +11,16 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans', sans-serif; /* Define a fonte 'Noto Sans' como padrão para o corpo */
-    background-color: #f4f4f4; /* Define a cor de fundo do corpo */
-    display: flex; /* Aplica display flex para o layout */
-    flex-direction: column; /* Coloca os itens em uma coluna */
-    align-items: flex-start; /* Alinha os itens ao canto esquerdo */
-    justify-content: flex-start; /* Garante que os itens estejam no topo */
-    min-height: 100vh; /* Garante que o corpo ocupe no mínimo 100% da altura da tela */
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo ao centro horizontalmente */
+    justify-content: center; /* Alinha o conteúdo ao centro verticalmente */
+    min-height: 100vh;
+    text-align: center; /* Centraliza o texto */
 }
+
 
 header {
     border-radius: 0 0 20px 20px; /* Define bordas arredondadas no rodapé do cabeçalho */

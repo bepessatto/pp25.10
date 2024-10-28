@@ -1,7 +1,16 @@
 let button = document.getElementById("enviar");
 // Obtém o botão com o ID "enviar" e armazena na variável "button"
 
-button.onclick = async function() {
+let formulario = document.getElementById("displayForm");
+
+let tipoUsuario = sessionStorage.getItem("tipoUsuario");
+
+if (tipoUsuario == "Refugiado"){
+    formulario.style.display = "none";
+}
+
+button.onclick = async function(e) {
+    e.preventDefault();
     // Define uma função assíncrona que será executada quando o botão for clicado
 
     let form = document.getElementById("formulario");
@@ -9,8 +18,9 @@ button.onclick = async function() {
 
     let dadosForm = new FormData(form);
     // Cria um objeto FormData contendo todos os dados do formulário para envio
+    dadosForm.append("userId",sessionStorage.getItem("userId"));
 
-    const response = await fetch('http://localhost:3000/api/store/empresas', {
+    const response = await fetch('http://localhost:3003/api/store/empresas', {
         // Faz uma requisição HTTP do tipo POST para a URL especificada
 
         method: "POST",
@@ -29,6 +39,10 @@ button.onclick = async function() {
         // Exibe um alerta de sucesso
     } else {
         alert("Não foi criado!");
+        for (const iterator of dadosForm) {
+            alert(iterator);
+        }
+        
         // Exibe um alerta indicando que a criação falhou
 
         console.log(content.sql);

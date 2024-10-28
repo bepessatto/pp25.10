@@ -42,7 +42,7 @@ sign_in_btn2.addEventListener("click", () => {
 // Função assíncrona para buscar dados do usuário (a ser usada para login ou obtenção de informações)
 async function getUser() {
     // Faz uma requisição POST para a API de login
-    const response = await fetch('http://localhost:3000/api/login', {
+    const response = await fetch('http://localhost:3003/api/login', {
         method: "POST",
         headers: { "Content-Type": "application/json" }, // Define o tipo de conteúdo como JSON
         body: JSON.stringify(data) // Envia os dados no corpo da requisição
@@ -71,7 +71,7 @@ async function handleSubmit(event) {
 
     let data = { usuario, email, senha, tipoUsuario };  // Inclui o tipo de usuário nos dados
 
-    const response = await fetch('http://localhost:3000/api/user/create', {
+    const response = await fetch('http://localhost:3003/api/user/create', {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -102,7 +102,7 @@ async function handleLogin(event) {
     let data = { email, senha };
 
     // Faz uma requisição POST para a API de login
-    const response = await fetch('http://localhost:3000/api/login', {
+    const response = await fetch('http://localhost:3003/api/login', {
         method: "POST",
         headers: {
             "Content-Type": "application/json", // Define o tipo de conteúdo como JSON
@@ -115,6 +115,10 @@ async function handleLogin(event) {
 
     // Verifica se o login foi bem-sucedido
     if (results.success) {
+
+        sessionStorage.setItem("tipoUsuario", results.data.tipo)
+        sessionStorage.setItem("userId", results.data.id)
+        
         // Redireciona o usuário para a página de empresas
         window.location.href = '../front/empresas.html';
         alert(results.message); // Exibe uma mensagem de sucesso
