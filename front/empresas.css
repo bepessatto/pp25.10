@@ -15,22 +15,24 @@ body {
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinha o conteúdo ao centro horizontalmente */
-    justify-content: center; /* Alinha o conteúdo ao centro verticalmente */
+    align-items: center;
     min-height: 100vh;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
 }
 
-
 header {
-    border-radius: 0 0 20px 20px; /* Define bordas arredondadas no rodapé do cabeçalho */
-    width: 100%; /* Ocupa 100% da largura da tela */
-    padding: 20px 0; /* Adiciona espaçamento no topo e embaixo */
-    display: flex; /* Aplica display flex para o layout do cabeçalho */
-    justify-content: space-between; /* Distribui os itens ao longo do cabeçalho com espaço entre eles */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    background-color: #bef790; /* Define a cor de fundo do cabeçalho */
-    z-index: 10; /* Define a posição no empilhamento de elementos */
+    position: fixed; /* Mantém o header fixo no topo */
+    top: 0; /* Define o topo como 0 */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bef790;
+    z-index: 10;
 }
 
 header .logo {
@@ -106,8 +108,14 @@ button:hover {
 }
 
 .contentproje {
-    text-align: left; /* Alinha o conteúdo à esquerda */
-    margin: 20px 0; /* Adiciona espaçamento superior e inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 10px; /* Para compensar o header fixo */
+    min-height: calc(80vh - 120px); /* Centraliza o conteúdo no espaço disponível abaixo do header */
 }
 
 .contentproje h3 {
