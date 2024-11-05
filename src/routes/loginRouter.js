@@ -9,6 +9,23 @@ const { login } = require("../controller/loginController");
 
 // Define uma rota POST para o login. Quando a rota '/login' for acessada,
 // a função login será executada para lidar com a lógica de autenticação
+
+/**
+ * @swagger
+ * /login:
+ *  post:
+ *    summary: Efetua o login do usuário
+ *    responses:
+ *      200:
+ *        description: Sucesso!
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: array
+ *              items:
+ *                type: object
+ */
+
 router.post('/login', login);
 
 // Exporta o roteador para que ele possa ser utilizado em outros módulos da aplicação
