@@ -4,7 +4,7 @@ var knex = require('knex')({
         host: 'localhost',
         user: 'root',
         password: 'root',
-        database: 'bd_pessatto',
+        database: 'bd_4med',
         charset: 'utf8',
         port: 3306
     }

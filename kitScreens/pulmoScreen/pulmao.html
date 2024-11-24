@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Cirúrgico - Pulmão</title>
+    <link rel="stylesheet" href="pulmao.css">
+</head>
+<body>
+    <header>
+        <a href="../../login e cadastro/scan.html"><img src="../../front/images/WhatsApp_Image_2024-11-24_at_11.24.14-removebg-preview.png" class="logo" alt=""></a>
+        <ul>
+            <img src="../../front/images/mdi--user.svg" class="logoImg">
+            <li><a>Gustavo</a></li>
+        </ul>
+    </header>
+
+    <!-- Corpo principal -->
+    <main>
+        <div class="title-container">
+            <h1 class="title">KIT CIRÚRGICO – PULMÃO</h1>
+        </div>
+        
+        
+        <div class="containerColumns">
+            <div class="containerChecklist">
+                <p class="checklistItem">• Tesoura Boyd 19cm</p>
+                <p class="itemUncheck">• Tesoura Dietrich 18 cm 25°</p>
+                <p class="checklistItem">• Tesoura Dietrich 18 cm 45°</p>
+                <p class="checklistItem">• Tesoura Dietrich 18 cm 60°</p>
+                <p class="itemUncheck">• Tesoura Dietrich 18 cm 90°</p>
+                <p class="itemUncheck">• Tesoura Dietrich 18 cm 125°</p>
+                <p class="checklistItem">• Tesoura Metzembaum 18 cm</p>
+            </div>
+
+            <div class="containerChecklist">
+                <p class="itemUncheck">• Tesoura Metzembaum 18 cm</p>
+                <p class="checklistItem">• Pinça Adson 12 cm</p>
+                <p class="checklistItem">• Pinça Adson 12 cm</p>
+                <p class="checklistItem">• Pinça Adson 12 cm</p>
+                <p class="checklistItem">• Pinça Adson 12 cm</p>
+                <p class="itemUncheck">• Pinça Adson 12 cm</p>
+                <p class="checklistItem">• Pinça Adson 12 cm</p>
+            </div>
+        </div>
+        
+        
+    <button id="concluir-btn" class="checklist-title" onclick="showAlert()">Concluir</button>
+    </main>
+
+    <!-- Botão de voltar -->
+    <a href="../../home/index.html" class="back-button">Voltar</a>
+
+    <!-- Referência ao arquivo JavaScript -->
+    <script src="pul.js"></script>
+    <!-- Referência ao arquivo JavaScript -->
+    <script>
+        // Function to show an alert
+        function showAlert() {
+            const result = confirm("O kit está incompleto, você deseja mesmo continuar com a confecção do kit?");
+            if (result) {
+                alert("Kit incompleto confirmado");
+            window.location.assign("../../login e cadastro/scan.html")
+            } else {
+            }
+        }
+    </script>
+</body>
+</html>

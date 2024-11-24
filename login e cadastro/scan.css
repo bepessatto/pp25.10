@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(232, 232, 232);
+}
+
+main{
+    max-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logoDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.logoImg{
+    /* padding-top: 100px; */
+    height: 300px;
+    margin-bottom: -100px;
+}
+
+.cardDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+}
+
+.cardText{
+    font-size: 60px;
+    color: #009950;
+    font-family: sans-serif;
+    margin-top: 110px;
+}
+
+.cardImg{
+    margin-top: -90px;
+    height: 150px;
+}

@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.buttonLeft{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.checklist-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background:#009950;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-flex; /* Faz a caixa ajustar ao conteúdo */
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    gap: 10px;
+    width: fit-content; /* Ajusta a largura da caixa ao tamanho do texto */
+    border-style: none;
+    cursor: pointer;
+}
+
+.logoImg{
+    height: 50px;
+}
+.logo{
+    padding-left: 20px;
+    height: 130px;
+}
+
+header ul {
+    display: flex; /* Coloca os itens do menu em linha */
+    padding: 0; /* Remove o padding do <ul> */
+    margin: 0; /* Remove a margem do <ul> */
+}
+
+header ul li {
+    padding-top: 10px;
+    margin-left: -25px;
+    list-style: none; /* Remove o estilo padrão de lista */
+}
+
+header ul li a {
+    color: #009950; /* Define a cor do texto dos links */
+    font-weight: 400; /* Define o peso da fonte como normal */
+    padding: 0 30px; /* Adiciona espaçamento lateral aos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 22px; /* Define o tamanho da fonte */
+}
+
+.profile span {
+    font-weight: bold;
+    color: #0b8e3d;
+    font-size: 18px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.box-link {
+    text-decoration: none;  /* Remove sublinhado dos links */
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+    background-color: #d9d9d9;
+    padding: 30px;
+    border: 2px solid #0b8e3d;
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Classe ativa para a caixa selecionada */
+.box.active {
+    background-color: #0b8e3d;
+    color: white;
+    border-color: #075c28;
+}
+
+.boxIcon{
+    height: 50px;
+}

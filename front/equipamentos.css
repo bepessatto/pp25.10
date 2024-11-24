@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+/* Importa a fonte 'Noto Sans' do Google Fonts com diferentes variações de peso e estilo */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* Reseta a margem e o padding para todos os elementos e define a fonte padrão como 'Poppins' */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    max-height: 100vh;
+    text-align: center;
+    justify-content: space-between;
+}
+
+header {
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+
+.logoImg{
+    height: 50px;
+}
+.logo{
+    padding-left: 20px;
+    height: 130px;
+}
+
+header ul {
+    display: flex; /* Coloca os itens do menu em linha */
+    padding: 0; /* Remove o padding do <ul> */
+    margin: 0; /* Remove a margem do <ul> */
+}
+
+header ul li {
+    padding-top: 10px;
+    margin-left: -25px;
+    list-style: none; /* Remove o estilo padrão de lista */
+}
+
+header ul li a {
+    color: #009950; /* Define a cor do texto dos links */
+    font-weight: 400; /* Define o peso da fonte como normal */
+    padding: 0 30px; /* Adiciona espaçamento lateral aos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 22px; /* Define o tamanho da fonte */
+}
+
+    form {
+        background: white; /* Define o fundo branco para o formulário */
+        border-radius: 12px; /* Define bordas arredondadas */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave ao redor do formulário */
+        padding: 20px; 
+        width: 900px;
+        margin-bottom: 50px;
+        box-sizing: border-box; 
+    }
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    margin-left: 55px;
+    display: flex; /* Garante que os labels ocupem toda a largura */
+    margin-bottom: 5px; /* Adiciona espaçamento inferior aos labels */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    color: #333; /* Define a cor do texto */
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 90%; /* Ocupa 90% da largura do formulário */
+    padding: 10px;
+    margin: 15px auto; /* Centraliza os campos e adiciona espaçamento */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+}
+
+button {
+    width: 90%; /* Botão ocupa 90% da largura do formulário */
+    padding: 15px; /* Adiciona mais espaçamento interno */
+    background-color: #009950;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px; /* Adiciona espaçamento superior */
+}
+
+.contentproje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 10px; /* Para compensar o header fixo */
+    min-height: calc(80vh - 120px); /* Centraliza o conteúdo no espaço disponível abaixo do header */
+}
+
+.contentproje h3 {
+    font-size: 35px; /* Define o tamanho da fonte do título */
+    color: #000; /* Define a cor do título */
+    margin-bottom: 10px; /* Adiciona espaçamento inferior */
+}
+
+.contentproje p {
+    font-size: 16px; /* Define o tamanho da fonte do parágrafo */
+    color: #333; /* Define a cor do texto */
+    max-width: 800px; /* Define a largura máxima do parágrafo */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.contentproje .bntproj {
+    display: inline-block; /* Exibe como bloco inline */
+    background: #bef790; /* Define a cor de fundo */
+    color: #20582e; /* Define a cor do texto */
+    font-size: 17px; /* Define o tamanho da fonte */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    border-radius: 8px; /* Define bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+    margin-top: 20px; /* Adiciona espaçamento superior */
+}
+
+

@@ -1,0 +1,180 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    text-align: center; /* Centraliza o conteúdo dentro do body */
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header reaproveitado */
+header {
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logoImg{
+    height: 50px;
+}
+
+.logo{
+    padding-left: 20px;
+    height: 130px;
+}
+
+header ul {
+    display: flex; /* Coloca os itens do menu em linha */
+    padding: 0; /* Remove o padding do <ul> */
+    margin: 0; /* Remove a margem do <ul> */
+}
+
+header ul li {
+    padding-top: 10px;
+    margin-left: -25px;
+    list-style: none; /* Remove o estilo padrão de lista */
+}
+
+header ul li a {
+    color: #009950; /* Define a cor do texto dos links */
+    font-weight: 400; /* Define o peso da fonte como normal */
+    padding: 0 30px; /* Adiciona espaçamento lateral aos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 22px; /* Define o tamanho da fonte */
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    background:#009950;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+}
+
+
+.title-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.checklist-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background:#009950;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-flex; /* Faz a caixa ajustar ao conteúdo */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: fit-content; /* Ajusta a largura da caixa ao tamanho do texto */
+    border-style: none;
+    cursor: pointer;
+}
+
+.checklist-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+.checklist-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 10px 20px; /* Espaçamento entre as colunas e linhas */
+    max-width: 900px; /* Limite para a largura */
+    margin: 20px auto; /* Centraliza a lista */
+}
+
+.checklist-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #009950;
+    border-radius: 10px; /* Bordas arredondadas */
+    font-size: 16px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile span {
+    font-weight: bold;
+    color: #0b8e3d;
+    font-size: 18px;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #009950;
+}
+
+/* Botão de voltar */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #009950;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.containerColumns{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.containerChecklist{
+    display: flex;
+    flex-direction: column;
+}
+
+.checklistItem{
+    color: green;
+    font-weight: bold;
+    display: flex;
+}
+
+.itemUncheck{
+    display: flex;
+    color: red;
+    font-weight: bold;
+}
